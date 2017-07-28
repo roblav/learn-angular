@@ -1,6 +1,6 @@
 import { browser, by, element } from 'protractor';
 
-export class NgMd01Page {
+export class HolidayAppPage {
   navigateTo() {
     return browser.get('/');
   }

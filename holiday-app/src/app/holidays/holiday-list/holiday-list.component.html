@@ -1,0 +1,29 @@
+<p>
+  holiday-list works!
+</p>
+
+<!-- List Holidays -->
+
+<h2>Holidays</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Start date</th>
+      <th>End Date</th>
+      <th>Days</th>
+      <th>Hours</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let holiday of holidays">
+      <td>{{holiday.description}}</td>
+      <td>{{holiday.startDate}}</td>
+      <td>{{holiday.endDate}}</td>
+      <td>{{holiday.days}}</td>
+      <td>{{holiday.hours}}</td>
+    </tr>
+  </tbody>
+</table>
+

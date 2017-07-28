@@ -1,10 +1,10 @@
-import { NgMd01Page } from './app.po';
+import { HolidayAppPage } from './app.po';
 
-describe('ng-md01 App', () => {
-  let page: NgMd01Page;
+describe('holiday-app App', () => {
+  let page: HolidayAppPage;
 
   beforeEach(() => {
-    page = new NgMd01Page();
+    page = new HolidayAppPage();
   });
 
   it('should display welcome message', () => {
