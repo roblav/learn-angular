@@ -2,7 +2,7 @@
 
 <h2>Holidays</h2>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Description</th>
@@ -10,6 +10,7 @@
       <th>End Date</th>
       <th>Days</th>
       <th>Hours</th>
+      <th>Taken</th>
     </tr>
   </thead>
   <tbody>
@@ -19,6 +20,7 @@
       <td>{{holiday.endDate | date:'dd/MM/yyyy'}}</td>
       <td>{{holiday.days}}</td>
       <td>{{holiday.hours}}</td>
+      <td>{{holiday.taken}}</td>
     </tr>
   </tbody>
 </table>

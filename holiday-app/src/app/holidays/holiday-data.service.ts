@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Holiday } from './holiday.model'
+import { Holiday } from './holiday.model';
+import { ApiService } from './api.service';
+import { Observable } from 'rxjs/Observable';
 
 
 @Injectable()
@@ -7,23 +9,13 @@ export class HolidayDataService {
 
   private lastId: number = 0
 
-  private holidays: Holiday[] = [
-    {
-      id: 0,
-      description: "Centre Parcs",
-      startDate: new Date(),
-      endDate: new Date(),
-      days: 0,
-      hours: 0,
-      taken: false
-    }
-  ]
+  private holidays: Holiday[] = []
 
-  constructor() { }
+  constructor(private api: ApiService) { }
 
   //Simulate GET /holidays
-  getAllHolidays(): Holiday[] {
-    return this.holidays
+  getAllHolidays(): Observable<Holiday[]> {
+    return this.api.getAllHolidays();
   }
 
   //Simulate GET /holidays/:id

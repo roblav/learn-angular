@@ -1,9 +1,10 @@
-[
+{
+  "holidays": [
     {
       "id": 0,
       "description": "Centre Parcs",
-      "startDate": "new Date()",
-      "endDate": "new Date()",
+      "startDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
       "days": 6,
       "hours": 45,
       "taken": false
@@ -11,8 +12,8 @@
     {
       "id": 1,
       "description": "Day to sort house",
-      "startDate": "new Date()",
-      "endDate": "new Date()",
+      "startDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
       "days": 1,
       "hours": 7.5,
       "taken": false
@@ -20,8 +21,8 @@
     {
       "id": 2,
       "description": "Childcare: School closed",
-      "startDate": "new Date()",
-      "endDate": "new Date()",
+      "startDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
       "days": 0,
       "hours": 3,
       "taken": false
@@ -29,8 +30,8 @@
     {
       "id": 3,
       "description": "Wimbledon",
-      "startDate": "new Date()",
-      "endDate": "new Date()",
+      "startDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
       "days": 1,
       "hours": 7.5,
       "taken": true
@@ -38,11 +39,11 @@
     {
       "id": 4,
       "description": "U2 Ireland",
-      "startDate": "new Date()",
-      "endDate": "new Date()",
+      "startDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDate": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
       "days": 2,
       "hours": 15,
       "taken": true
     }
-
-]
+  ]
+}

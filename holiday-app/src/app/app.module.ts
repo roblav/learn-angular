@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { HolidaysModule } from './holidays/holidays.module'
 import { LoginModule } from './login/login.module'
 import { AppRouterModule } from './app-router.module'
+import { HttpModule } from '@angular/http';
+
+import { ApiService } from './holidays/api.service'
 
 
 @NgModule({
@@ -15,9 +18,10 @@ import { AppRouterModule } from './app-router.module'
     BrowserModule,
     HolidaysModule,
     LoginModule,
-    AppRouterModule
+    AppRouterModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
