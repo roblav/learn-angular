@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HolidaysModule } from './holidays/holidays.module'
+import { LoginModule } from './login/login.module'
+import { AppRouterModule } from './app-router.module'
+
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { HolidaysModule } from './holidays/holidays.module'
   ],
   imports: [
     BrowserModule,
-    HolidaysModule
+    HolidaysModule,
+    LoginModule,
+    AppRouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,3 @@
-<p>
-  holiday-list works!
-</p>
-
 <!-- List Holidays -->
 
 <h2>Holidays</h2>
@@ -19,8 +15,8 @@
   <tbody>
     <tr *ngFor="let holiday of holidays">
       <td>{{holiday.description}}</td>
-      <td>{{holiday.startDate}}</td>
-      <td>{{holiday.endDate}}</td>
+      <td>{{holiday.startDate | date:'dd/MM/yyyy'}}</td><!--{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}-->
+      <td>{{holiday.endDate | date:'dd/MM/yyyy'}}</td>
       <td>{{holiday.days}}</td>
       <td>{{holiday.hours}}</td>
     </tr>
