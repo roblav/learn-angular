@@ -10,6 +10,11 @@ import { Holiday } from '../holiday.model'
 })
 export class HolidayListComponent implements OnInit {
 
+  workHours = 7.5;
+
+  //holiday = new Holiday();
+  holiday: Holiday = {}
+
   holidays: Holiday[] = []
 
   constructor(private holidayDataService: HolidayDataService) { 
