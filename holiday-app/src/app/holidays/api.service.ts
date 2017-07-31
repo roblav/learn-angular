@@ -27,6 +27,8 @@ export class ApiService {
   }
 
   public createHoliday(holiday: Holiday): Observable<Holiday[]> {
+    
+  console.log("Holiday: "+holiday)
   return this.http
     .post(API_URL + '/holidays', holiday)
     .map(response => {

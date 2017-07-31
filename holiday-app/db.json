@@ -1,0 +1,76 @@
+{
+  "holidays": [
+    {
+      "id": 0,
+      "description": "Centre Parcs",
+      "startDay": "2017-08-01T23:00:00.000Z",
+      "endDay": "2017-08-07T23:00:00.000Z",
+      "days": 6,
+      "hours": 45,
+      "taken": false
+    },
+    {
+      "id": 1,
+      "description": "Day to sort house",
+      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "days": 1,
+      "hours": 7.5,
+      "taken": false
+    },
+    {
+      "id": 2,
+      "description": "Childcare: School closed",
+      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "days": 0,
+      "hours": 3,
+      "taken": false
+    },
+    {
+      "id": 3,
+      "description": "Wimbledon",
+      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "days": 1,
+      "hours": 7.5,
+      "taken": true
+    },
+    {
+      "id": 4,
+      "description": "U2 Ireland",
+      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "days": 2,
+      "hours": 15,
+      "taken": true
+    },
+    {
+      "id": 5
+    },
+    {
+      "days": "5",
+      "description": "Test 1",
+      "startDay": "2017-07-03T23:00:00.000Z",
+      "endDay": "2017-07-11T23:00:00.000Z",
+      "hours": 37.5,
+      "id": 6
+    },
+    {
+      "days": "5",
+      "description": "Xmas",
+      "startDay": "2017-08-07T23:00:00.000Z",
+      "endDay": "2017-08-14T23:00:00.000Z",
+      "hours": 37.5,
+      "id": 7
+    },
+    {
+      "days": "2",
+      "description": "Test 2",
+      "startDay": "2017-08-08T23:00:00.000Z",
+      "endDay": "2017-08-15T23:00:00.000Z",
+      "hours": 15,
+      "id": 8
+    }
+  ]
+}

@@ -35,7 +35,7 @@ export class HolidayDataService {
   }
 
   // Simulate POST /todos
-  addHoliday(holiday: Holiday): Observable<Holiday> {
+  addHoliday(holiday: Holiday): Observable<Holiday[]> {
     return this.api.createHoliday(holiday);
   }
 

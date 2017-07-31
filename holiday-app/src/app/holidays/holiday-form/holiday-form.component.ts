@@ -27,26 +27,21 @@ export class HolidayFormComponent implements OnInit {
   get currentHoliday() { return JSON.stringify(this.holiday); }
 
   onBlur() {
-    console.log(this.holiday.days)
     //Calculate hours
     let holidayhours = this.dailyHours * this.holiday.days
-    console.log(holidayhours)
     this.holiday.hours = holidayhours
   }
 
-  onSubmit() { 
-    this.submitted = true; 
-    this.onAddHoliday(JSON.stringify(this.holiday));
-  }
-
-  onAddHoliday(holiday) {
+  onAddHoliday() {
     this.holidayDataService
-      .addHoliday(holiday)
+      .addHoliday(this.holiday)
       .subscribe(
         (newHoliday) => {
           this.holidays = this.holidays.concat(newHoliday);
         }
       );
+
+    this.holiday = { "days": 0 }
   }
 
 }
