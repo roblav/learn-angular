@@ -26,12 +26,17 @@ export class HolidayDataService {
   }
 
   //Simulate POST /holidays
-  addHoliday(holiday: Holiday): HolidayDataService {
+  createHoliday(holiday: Holiday): HolidayDataService {
     if(!holiday.id){
       holiday.id = ++this.lastId
     }
     this.holidays.push(holiday)
     return this
+  }
+
+  // Simulate POST /todos
+  addHoliday(holiday: Holiday): Observable<Holiday> {
+    return this.api.createHoliday(holiday);
   }
 
   //Simulate DELETE /holidays/:id

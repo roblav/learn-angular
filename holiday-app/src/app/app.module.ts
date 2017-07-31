@@ -2,12 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdInputModule,
-         MdButtonModule,
-         MdDatepickerModule,
-         MdNativeDateModule } from '@angular/material';
-import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { HolidaysModule } from './holidays/holidays.module'
@@ -26,13 +20,7 @@ import { ApiService } from './holidays/api.service'
     HolidaysModule,
     LoginModule,
     AppRouterModule,
-    HttpModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    MdInputModule,
-    MdButtonModule,
-    MdDatepickerModule,
-    MdNativeDateModule
+    HttpModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

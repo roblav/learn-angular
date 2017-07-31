@@ -26,6 +26,15 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  public createHoliday(holiday: Holiday): Observable<Holiday[]> {
+  return this.http
+    .post(API_URL + '/holidays', holiday)
+    .map(response => {
+      return new Holiday(response.json());
+    })
+    .catch(this.handleError);
+}
+
   private handleError(error: Response | any) {
     console.error('ApiService::handleError', error);
     return Observable.throw(error);
