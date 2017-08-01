@@ -36,4 +36,14 @@ export class HolidayComponent implements OnInit {
       )
   }
 
+  onDeleteHoliday(id: number) {
+    this.holidayDataService
+      .deleteHolidayById(id)
+      .subscribe(
+        (_) => {
+          this.holidays = this.holidays.filter((t) => t.id !== id);
+        }
+      )
+  }
+
 }

@@ -46,15 +46,6 @@
       "taken": true
     },
     {
-      "days": "5",
-      "hours": 37.5,
-      "taken": false,
-      "description": "Xmas",
-      "startDay": "2017-08-08T23:00:00.000Z",
-      "endDay": "2017-08-14T23:00:00.000Z",
-      "id": 5
-    },
-    {
       "days": "6",
       "hours": 45,
       "taken": false,
@@ -62,13 +53,6 @@
       "startDay": "2017-08-13T23:00:00.000Z",
       "endDay": "2017-08-20T23:00:00.000Z",
       "id": 6
-    },
-    {
-      "days": "5",
-      "hours": 37.5,
-      "taken": false,
-      "description": "Test",
-      "id": 7
     }
   ]
 }

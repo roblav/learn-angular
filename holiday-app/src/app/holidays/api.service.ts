@@ -28,14 +28,21 @@ export class ApiService {
 
   public createHoliday(holiday: Holiday): Observable<Holiday[]> {
     
-  console.log("Holiday: "+holiday)
-  return this.http
-    .post(API_URL + '/holidays', holiday)
-    .map(response => {
-      return new Holiday(response.json());
-    })
-    .catch(this.handleError);
-}
+    //console.log("Holiday: "+holiday)
+    return this.http
+      .post(API_URL + '/holidays', holiday)
+      .map(response => {
+        return new Holiday(response.json());
+      })
+      .catch(this.handleError);
+  }
+
+  public deleteHolidayById(holidayId: number): Observable<null> {
+    return this.http
+      .delete(API_URL + '/holidays/' + holidayId)
+      .map(response => null)
+      .catch(this.handleError);
+  }
 
   private handleError(error: Response | any) {
     console.error('ApiService::handleError', error);

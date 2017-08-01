@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Holiday } from '../holiday.model'
 
 @Component({
@@ -12,15 +12,25 @@ export class HolidayListComponent implements OnInit {
   @Input()
   holidays: Holiday[] = []
 
+  @Output()
+  edit: EventEmitter<Holiday> = new EventEmitter();
+
+  @Output()
+  delete: EventEmitter<Holiday> = new EventEmitter();
+
   //holiday = new Holiday();
   holiday: Holiday = {}
 
-  constructor() { 
-
-  }
+  constructor() {}
 
   ngOnInit() {}
 
-  
+  editHoliday(id) {
+    this.edit.emit(id);
+  }
+
+  deleteHoliday(id) {
+    this.delete.emit(id);
+  }
 
 }

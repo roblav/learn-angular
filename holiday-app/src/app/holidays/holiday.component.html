@@ -3,4 +3,7 @@
 </p>
 <router-outlet></router-outlet>
 <holiday-form (add)="onAddHoliday($event)"></holiday-form>
-<holiday-list [holidays]="holidays"></holiday-list>
+<holiday-list 
+  (delete)="onDeleteHoliday($event)"
+  [holidays]="holidays"
+  ></holiday-list>

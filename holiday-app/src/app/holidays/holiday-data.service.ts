@@ -2,10 +2,13 @@ import { Injectable } from '@angular/core';
 import { Holiday } from './holiday.model';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 
 @Injectable()
 export class HolidayDataService {
+
+  private subject = new Subject<any>();
 
   private lastId: number = 0
 
@@ -40,10 +43,11 @@ export class HolidayDataService {
   }
 
   //Simulate DELETE /holidays/:id
-  deleteHolidayById(id): HolidayDataService {
-    this.holidays = this.holidays
-      .filter(holiday => holiday.id !== id)
-    return this
+  deleteHolidayById(id): Observable<Holiday> {
+    //this.holidays = this.holidays
+    //  .filter(holiday => holiday.id !== id)
+    //return this
+    return this.api.deleteHolidayById(id)
   }
 
   //Simulate PUT /holidays:id

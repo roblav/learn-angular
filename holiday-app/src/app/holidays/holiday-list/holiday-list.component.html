@@ -11,6 +11,8 @@
       <th>Days</th>
       <th>Hours</th>
       <th>Taken</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +23,8 @@
       <td>{{holiday.days}}</td>
       <td>{{holiday.hours}}</td>
       <td>{{holiday.taken}}</td>
+      <td><button (click)="editHoliday(holiday.id)">Edit</button></td>
+      <td><button (click)="deleteHoliday(holiday.id)">Delete</button></td>
     </tr>
   </tbody>
 </table>
