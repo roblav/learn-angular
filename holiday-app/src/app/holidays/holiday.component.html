@@ -3,4 +3,4 @@
 </p>
 <router-outlet></router-outlet>
 <holiday-form (add)="onAddHoliday($event)"></holiday-form>
-<holiday-list></holiday-list>
+<holiday-list [holidays]="holidays"></holiday-list>

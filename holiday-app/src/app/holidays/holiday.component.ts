@@ -15,7 +15,15 @@ export class HolidayComponent implements OnInit {
 
   constructor(private holidayDataService: HolidayDataService) { }
 
-  ngOnInit() {
+  public ngOnInit() {
+    //Get allHolidays and add to holidays array
+    this.holidayDataService
+      .getAllHolidays()
+      .subscribe(
+        (holidays) => {
+          this.holidays = holidays
+        }
+      )
   }
 
   onAddHoliday(holiday: Holiday) {
@@ -24,7 +32,6 @@ export class HolidayComponent implements OnInit {
       .subscribe(
         (newHoliday) => {
           this.holidays = this.holidays.concat(newHoliday);
-
         }
       )
   }

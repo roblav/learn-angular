@@ -1,36 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { HolidayDataService } from '../holiday-data.service'
+import { Component, OnInit, Input } from '@angular/core';
 import { Holiday } from '../holiday.model'
 
 @Component({
   selector: 'holiday-list',
   templateUrl: './holiday-list.component.html',
   styleUrls: ['./holiday-list.component.css'],
-  providers: [HolidayDataService]
+  providers: []
 })
 export class HolidayListComponent implements OnInit {
 
-  workHours = 7.5;
+  @Input()
+  holidays: Holiday[] = []
 
   //holiday = new Holiday();
   holiday: Holiday = {}
 
-  holidays: Holiday[] = []
+  constructor() { 
 
-  constructor(private holidayDataService: HolidayDataService) { 
-    //console.dir(holidayDataService.getAllHolidays())
-    //Object.assign(this.holidays, holidayDataService.getAllHolidays())
   }
 
-  ngOnInit() {
-    this.holidayDataService
-      .getAllHolidays()
-      .subscribe(
-        (holidays) => {
-          this.holidays = holidays;
-        }
-      );
-  }
+  ngOnInit() {}
 
   
 
