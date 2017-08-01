@@ -46,31 +46,22 @@
       "taken": true
     },
     {
+      "days": "5",
+      "hours": 37.5,
+      "taken": false,
+      "description": "Xmas",
+      "startDay": "2017-08-08T23:00:00.000Z",
+      "endDay": "2017-08-14T23:00:00.000Z",
       "id": 5
     },
     {
-      "days": "5",
-      "description": "Test 1",
-      "startDay": "2017-07-03T23:00:00.000Z",
-      "endDay": "2017-07-11T23:00:00.000Z",
-      "hours": 37.5,
+      "days": "6",
+      "hours": 45,
+      "taken": false,
+      "description": "Centre Parcs",
+      "startDay": "2017-08-13T23:00:00.000Z",
+      "endDay": "2017-08-20T23:00:00.000Z",
       "id": 6
-    },
-    {
-      "days": "5",
-      "description": "Xmas",
-      "startDay": "2017-08-07T23:00:00.000Z",
-      "endDay": "2017-08-14T23:00:00.000Z",
-      "hours": 37.5,
-      "id": 7
-    },
-    {
-      "days": "2",
-      "description": "Test 2",
-      "startDay": "2017-08-08T23:00:00.000Z",
-      "endDay": "2017-08-15T23:00:00.000Z",
-      "hours": 15,
-      "id": 8
     }
   ]
 }

@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { HolidayDataService } from '../holiday-data.service'
 import { Holiday } from '../holiday.model'
 
 @Component({
@@ -9,17 +8,15 @@ import { Holiday } from '../holiday.model'
   styleUrls: ['./holiday-form.component.css']
 })
 export class HolidayFormComponent implements OnInit {
-  
   holidays: Holiday[] = [];
-
   dailyHours = 7.5;
-  holiday: Holiday = {
-    "days": 0
-  }
-
   submitted = false
+  holiday: Holiday = new Holiday();
 
-  constructor(private holidayDataService: HolidayDataService) { }
+  @Output()
+  add: EventEmitter<Holiday> = new EventEmitter();
+
+  constructor() { }
 
   ngOnInit() {
   }
@@ -32,7 +29,7 @@ export class HolidayFormComponent implements OnInit {
     this.holiday.hours = holidayhours
   }
 
-  onAddHoliday() {
+  /*onAddHoliday() {
     this.holidayDataService
       .addHoliday(this.holiday)
       .subscribe(
@@ -41,7 +38,15 @@ export class HolidayFormComponent implements OnInit {
         }
       );
 
-    this.holiday = { "days": 0 }
+    this.holiday = new Holiday();
   }
+  */
+
+  addHoliday() {
+    this.add.emit(this.holiday);
+    this.holiday = new Holiday();
+  }
+
+
 
 }

@@ -9,5 +9,7 @@ export class Holiday {
 
     constructor(values: Object = {}) {
         Object.assign(this, values);
+        this.days = 0
+        this.hours = 0
     }
 }
