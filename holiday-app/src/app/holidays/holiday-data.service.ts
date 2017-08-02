@@ -50,6 +50,10 @@ export class HolidayDataService {
     return this.api.deleteHolidayById(id)
   }
 
+  updateHoliday(holiday: Holiday): Observable<Holiday>  {
+    return this.api.updateHoliday(holiday);
+  }
+
   //Simulate PUT /holidays:id
   updateHolidayById(id: number, values: Object = {}): Holiday{
     let holiday = this.getHolidayById(id)

@@ -11,7 +11,9 @@ import { HolidayDataService } from './holiday-data.service'
 })
 export class HolidayComponent implements OnInit {
 
-  holidays: Holiday[] = []
+  holidays: Holiday[] = [];
+
+  updateHoliday: Holiday;
 
   constructor(private holidayDataService: HolidayDataService) { }
 
@@ -36,12 +38,30 @@ export class HolidayComponent implements OnInit {
       )
   }
 
+  onEditHoliday(id: number) {
+    this.updateHoliday = this.holidays.filter((h) => h.id === id).pop();
+    //console.log(this.updateHoliday)
+  }
+
+  onUpdateHoliday(holiday: Holiday) {
+    this.holidayDataService
+      .updateHoliday(holiday)
+      .subscribe(
+        (updatedHoliday) => {
+          holiday = updatedHoliday
+        },
+        (_) => {
+          // do nothing
+        } 
+      )
+  }
+
   onDeleteHoliday(id: number) {
     this.holidayDataService
       .deleteHolidayById(id)
       .subscribe(
         (_) => {
-          this.holidays = this.holidays.filter((t) => t.id !== id);
+          this.holidays = this.holidays.filter((h) => h.id !== id);
         }
       )
   }

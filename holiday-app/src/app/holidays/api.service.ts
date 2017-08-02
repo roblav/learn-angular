@@ -44,6 +44,15 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  public updateHoliday(holiday: Holiday): Observable<Holiday> {
+    return this.http
+      .put(API_URL + '/holidays/' + holiday.id, holiday)
+      .map(response => {
+        return new Holiday(response.json());
+      })
+      .catch(this.handleError);
+  }
+
   private handleError(error: Response | any) {
     console.error('ApiService::handleError', error);
     return Observable.throw(error);

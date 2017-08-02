@@ -46,12 +46,21 @@
       "taken": true
     },
     {
-      "days": "6",
-      "hours": 45,
       "taken": false,
-      "description": "Centre Parcs",
-      "startDay": "2017-08-13T23:00:00.000Z",
-      "endDay": "2017-08-20T23:00:00.000Z",
+      "days": "3",
+      "hours": 22.5,
+      "description": "Test Updated",
+      "startDay": "2017-08-21T23:00:00.000Z",
+      "endDay": "2017-08-23T23:00:00.000Z",
+      "id": 5
+    },
+    {
+      "taken": false,
+      "days": "5",
+      "hours": 37.5,
+      "description": "Test 2",
+      "startDay": "2017-08-15T23:00:00.000Z",
+      "endDay": "2017-08-15T23:00:00.000Z",
       "id": 6
     }
   ]

@@ -2,8 +2,13 @@
   holiday works!
 </p>
 <router-outlet></router-outlet>
-<holiday-form (add)="onAddHoliday($event)"></holiday-form>
+<holiday-form 
+  (add)="onAddHoliday($event)"
+  (update)="onUpdateHoliday($event)"
+  [updateHoliday]="updateHoliday"
+  ></holiday-form>
 <holiday-list 
+  (edit)="onEditHoliday($event)"
   (delete)="onDeleteHoliday($event)"
   [holidays]="holidays"
   ></holiday-list>
