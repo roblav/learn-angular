@@ -1,14 +1,19 @@
-<p>
-  holiday works!
-</p>
+
 <router-outlet></router-outlet>
 <holiday-form 
   (add)="onAddHoliday($event)"
   (update)="onUpdateHoliday($event)"
   [updateHoliday]="updateHoliday"
   ></holiday-form>
+  <h2 class="h4">Holidays</h2>
 <holiday-list 
   (edit)="onEditHoliday($event)"
   (delete)="onDeleteHoliday($event)"
-  [holidays]="holidays"
+  [holidays]="holidaysPending"
+  ></holiday-list>
+  <h2 class="h4">Holidays Taken</h2>
+<holiday-list 
+  (edit)="onEditHoliday($event)"
+  (delete)="onDeleteHoliday($event)"
+  [holidays]="holidaysTaken"
   ></holiday-list>

@@ -12,8 +12,21 @@ import { HolidayDataService } from './holiday-data.service'
 export class HolidayComponent implements OnInit {
 
   holidays: Holiday[] = [];
+  holidaysPending: Holiday[] = [];
+  holidaysTaken: Holiday[] = [];
 
   updateHoliday: Holiday;
+
+  date_sort_desc(date1: Holiday, date2: Holiday) {
+    let a = new Date(date2.startDay);
+    let b = new Date(date1.startDay);
+    return a>b ? -1 : a<b ? 1 : 0;
+  }
+
+  updateHolidayArray() {
+    this.holidaysPending = this.holidays.filter((h) => h.taken == false).sort(this.date_sort_desc)
+    this.holidaysTaken = this.holidays.filter((h) => h.taken == true).sort(this.date_sort_desc)
+  }
 
   constructor(private holidayDataService: HolidayDataService) { }
 
@@ -23,7 +36,9 @@ export class HolidayComponent implements OnInit {
       .getAllHolidays()
       .subscribe(
         (holidays) => {
+          //I want to filter holidays taken
           this.holidays = holidays
+          this.updateHolidayArray()
         }
       )
   }
@@ -34,12 +49,14 @@ export class HolidayComponent implements OnInit {
       .subscribe(
         (newHoliday) => {
           this.holidays = this.holidays.concat(newHoliday);
+          this.updateHolidayArray()
         }
       )
   }
 
   onEditHoliday(id: number) {
     this.updateHoliday = this.holidays.filter((h) => h.id === id).pop();
+    this.updateHolidayArray()
     //console.log(this.updateHoliday)
   }
 
@@ -49,6 +66,7 @@ export class HolidayComponent implements OnInit {
       .subscribe(
         (updatedHoliday) => {
           holiday = updatedHoliday
+          this.updateHolidayArray()
         },
         (_) => {
           // do nothing
@@ -62,6 +80,7 @@ export class HolidayComponent implements OnInit {
       .subscribe(
         (_) => {
           this.holidays = this.holidays.filter((h) => h.id !== id);
+          this.updateHolidayArray()
         }
       )
   }

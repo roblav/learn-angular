@@ -28,40 +28,22 @@
       "taken": false
     },
     {
-      "id": 3,
-      "description": "Wimbledon",
-      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
-      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "taken": true,
       "days": 1,
       "hours": 7.5,
-      "taken": true
+      "id": 3,
+      "description": "Wimbledon",
+      "startDay": "2017-07-06T23:00:00.000Z",
+      "endDay": "2017-07-06T23:00:00.000Z"
     },
     {
-      "id": 4,
-      "description": "U2 Ireland",
-      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
-      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "taken": true,
       "days": 2,
       "hours": 15,
-      "taken": true
-    },
-    {
-      "taken": false,
-      "days": "3",
-      "hours": 22.5,
-      "description": "Test Updated",
-      "startDay": "2017-08-21T23:00:00.000Z",
-      "endDay": "2017-08-23T23:00:00.000Z",
-      "id": 5
-    },
-    {
-      "taken": false,
-      "days": "5",
-      "hours": 37.5,
-      "description": "Test 2",
-      "startDay": "2017-08-15T23:00:00.000Z",
-      "endDay": "2017-08-15T23:00:00.000Z",
-      "id": 6
+      "id": 4,
+      "description": "U2 Ireland",
+      "startDay": "2017-07-19T23:00:00.000Z",
+      "endDay": "2017-07-20T23:00:00.000Z"
     }
   ]
 }
