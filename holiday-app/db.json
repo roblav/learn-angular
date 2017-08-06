@@ -10,13 +10,13 @@
       "taken": false
     },
     {
-      "id": 1,
-      "description": "Day to sort house",
-      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
-      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "taken": true,
       "days": 1,
       "hours": 7.5,
-      "taken": false
+      "id": 1,
+      "description": "Day to sort house",
+      "startDay": "2017-06-27T23:00:00.000Z",
+      "endDay": null
     },
     {
       "id": 2,
@@ -28,7 +28,7 @@
       "taken": false
     },
     {
-      "taken": true,
+      "taken": false,
       "days": 1,
       "hours": 7.5,
       "id": 3,
@@ -37,7 +37,7 @@
       "endDay": "2017-07-06T23:00:00.000Z"
     },
     {
-      "taken": true,
+      "taken": false,
       "days": 2,
       "hours": 15,
       "id": 4,

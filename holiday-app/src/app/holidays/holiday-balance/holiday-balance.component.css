@@ -1,0 +1,39 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: .5em;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.hero .hero-title {
+    flex: 0 1 auto;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1em;
+    margin-right: .5em;
+}
+
+.hero-title span {
+    display: block;
+    letter-spacing: .04em;
+    font-size: .8em;
+    color: #999;
+}
+
+.hero .item {
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.hero .number {
+    font-size: 36px;
+    line-height: 0.9;
+    margin-bottom: 0;
+}
+
+.hero .time{
+    font-size: 14px;
+    text-transform: lowercase;
+}

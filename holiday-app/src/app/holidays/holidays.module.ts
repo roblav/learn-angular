@@ -13,6 +13,7 @@ import { ApiService } from './api.service'
 
 import { HolidayListComponent } from './holiday-list/holiday-list.component';
 import { HolidayFormComponent } from './holiday-form/holiday-form.component';
+import { HolidayBalanceComponent } from './holiday-balance/holiday-balance.component';
 import { HolidayComponent } from './holiday.component';
 
 import { HolidaysRouterModule } from './holidays-router.module'
@@ -31,6 +32,7 @@ import { HolidaysRouterModule } from './holidays-router.module'
   declarations: [
     HolidayListComponent,
     HolidayFormComponent,
+    HolidayBalanceComponent,
     HolidayComponent
   ],
   exports: [

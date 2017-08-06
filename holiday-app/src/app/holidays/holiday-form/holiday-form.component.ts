@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 import { Holiday } from '../holiday.model'
+import { HolidayBalance } from '../holiday-balance.model'
 
 @Component({
   selector: 'holiday-form',
@@ -13,15 +14,13 @@ export class HolidayFormComponent implements OnInit {
   submitted: boolean = false;
   holiday: Holiday = new Holiday();
   editHoliday: boolean = false;
+  holidayBalance: HolidayBalance = new HolidayBalance();
 
-  @Input()
-  updateHoliday: Holiday;
+  @Input() updateHoliday: Holiday;
+  @Input() estimatedBalanceHoursEOY: number;
 
-  @Output()
-  add: EventEmitter<Holiday> = new EventEmitter();
-  
-  @Output()
-  update: EventEmitter<Holiday> = new EventEmitter();
+  @Output() add: EventEmitter<Holiday> = new EventEmitter();
+  @Output() update: EventEmitter<Holiday> = new EventEmitter();
 
   
   constructor() { }
