@@ -9,14 +9,12 @@ import { Holiday } from '../holiday.model'
 })
 export class HolidayListComponent implements OnInit {
 
-  @Input()
-  holidays: Holiday[] = []
+  @Input() holidays: Holiday[] = [];
+  @Input() holidaysTotals;
 
-  @Output()
-  edit: EventEmitter<Holiday> = new EventEmitter();
+  @Output() edit: EventEmitter<Holiday> = new EventEmitter();
 
-  @Output()
-  delete: EventEmitter<Holiday> = new EventEmitter();
+  @Output() delete: EventEmitter<Holiday> = new EventEmitter();
 
   //holiday = new Holiday();
   holiday: Holiday = {}

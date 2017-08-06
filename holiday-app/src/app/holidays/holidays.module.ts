@@ -15,6 +15,7 @@ import { HolidayListComponent } from './holiday-list/holiday-list.component';
 import { HolidayFormComponent } from './holiday-form/holiday-form.component';
 import { HolidayBalanceComponent } from './holiday-balance/holiday-balance.component';
 import { HolidayComponent } from './holiday.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { HolidaysRouterModule } from './holidays-router.module'
 
@@ -33,7 +34,8 @@ import { HolidaysRouterModule } from './holidays-router.module'
     HolidayListComponent,
     HolidayFormComponent,
     HolidayBalanceComponent,
-    HolidayComponent
+    HolidayComponent,
+    FooterComponent
   ],
   exports: [
     HolidayListComponent,

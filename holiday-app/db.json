@@ -44,6 +44,15 @@
       "description": "U2 Ireland",
       "startDay": "2017-07-19T23:00:00.000Z",
       "endDay": "2017-07-20T23:00:00.000Z"
+    },
+    {
+      "taken": false,
+      "days": "1",
+      "hours": 7.5,
+      "description": "Family day",
+      "startDay": "2017-08-24T23:00:00.000Z",
+      "endDay": "2017-08-24T23:00:00.000Z",
+      "id": 5
     }
   ]
 }
