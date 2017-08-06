@@ -1,17 +1,13 @@
 .flex-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end
 }
 
 aside {
-    flex: 0 1 auto;
+    flex: 0 1 25%;
     margin-right: 70px;
 }
 
 .form-container {
-    flex: 1 1 auto;
+    flex: 0 1 75%;
 }
-
-
-
-
