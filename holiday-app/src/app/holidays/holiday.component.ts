@@ -98,7 +98,7 @@ export class HolidayComponent implements OnInit {
       .updateHoliday(holiday)
       .subscribe(
         (updatedHoliday) => {
-          holiday = updatedHoliday
+          this.holidays = this.holidays.filter((h) => h.id !== updatedHoliday.id).concat(updatedHoliday)
           this.updateHolidayArray()
         },
         (_) => {

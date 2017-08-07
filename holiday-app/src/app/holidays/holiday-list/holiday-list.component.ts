@@ -13,22 +13,17 @@ export class HolidayListComponent implements OnInit {
   @Input() holidaysTotals;
 
   @Output() edit: EventEmitter<Holiday> = new EventEmitter();
-
   @Output() delete: EventEmitter<Holiday> = new EventEmitter();
 
   //holiday = new Holiday();
-  holiday: Holiday = {}
+  //holiday: Holiday = {}
 
   constructor() {}
 
   ngOnInit() {}
 
-  editHoliday(id) {
-    this.edit.emit(id);
-  }
+  editHoliday(id) { this.edit.emit(id); }
 
-  deleteHoliday(id) {
-    this.delete.emit(id);
-  }
+  deleteHoliday(id) { this.delete.emit(id); }
 
 }
