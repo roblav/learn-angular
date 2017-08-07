@@ -87,7 +87,8 @@ export class HolidayComponent implements OnInit {
   }
 
   onEditHoliday(id: number) {
-    this.updateHoliday = this.holidays.filter((h) => h.id === id).pop();
+    let holiday = this.holidays.filter((h) => h.id === id).pop();
+    this.updateHoliday = Object.assign({}, holiday);
     this.updateHolidayArray()
     //console.log(this.updateHoliday)
   }

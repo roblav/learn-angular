@@ -29,7 +29,7 @@
     },
     {
       "taken": false,
-      "days": 1,
+      "days": "1",
       "hours": 7.5,
       "id": 3,
       "description": "Wimbledon",
