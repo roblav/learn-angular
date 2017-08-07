@@ -3,12 +3,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th class="col-xs-2">Description</th>
+      <th class="col-xs-3">Description</th>
       <th class="col-xs-1">Start date</th>
       <th class="col-xs-1">End Date</th>
       <th class="col-xs-1">Days</th>
       <th class="col-xs-1">Hours</th>
-      <th class="col-xs-1">Taken</th>
       <th class="col-xs-1">&nbsp;</th>
       <th class="col-xs-1">&nbsp;</th>
     </tr>
@@ -22,7 +21,6 @@
       <th>{{holidaysTotals.hours}}</th>
       <th>&nbsp;</th>
       <th>&nbsp;</th>
-      <th>&nbsp;</th>
     </tr>
   </tfoot>
   <tbody>
@@ -32,7 +30,6 @@
       <td>{{holiday.endDay | date:'dd/MM/yyyy'}}</td>
       <td>{{holiday.days}}</td>
       <td>{{holiday.hours}}</td>
-      <td>{{holiday.taken}}</td>
       <td><button (click)="editHoliday(holiday.id)">Edit</button></td>
       <td><button (click)="deleteHoliday(holiday.id)">Delete</button></td>
     </tr>
