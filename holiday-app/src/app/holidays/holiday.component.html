@@ -25,6 +25,12 @@
 <div class="flex-container">
 
   <div class="form-container">
+
+    <h2 class="h4">Holidays Balance Details</h2>
+    <holiday-balance-details
+      [holidayBalance]="holidayBalance">
+    </holiday-balance-details>
+
     <holiday-form 
       (add)="onAddHoliday($event)" 
       (update)="onUpdateHoliday($event)" 

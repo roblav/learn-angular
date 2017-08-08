@@ -1,20 +1,3 @@
-<form>
-
-  <md-input-container>
-    <input mdInput [mdDatepicker]="periodEndDate" placeholder="Period end date" [(ngModel)]="holidayBalance.periodEndDate" name="periodEndDate">
-    <button mdSuffix [mdDatepickerToggle]="periodEndDate"></button>
-  </md-input-container>
-  <md-datepicker #periodEndDate startView="year" [startAt]="startDate"></md-datepicker>
-
-  <md-input-container>
-    <input mdInput placeholder="Estimated End Of Year" name="estimatedBalanceHoursEOY" [(ngModel)]="estimatedBalanceHoursEOY">
-  </md-input-container>
-
-  <md-input-container>
-    <input mdInput placeholder="Daily hours" name="dailyHours" [(ngModel)]="dailyHours">
-  </md-input-container>
-
-</form>
 
 <div class="row form-container">
   <div class="col-md-12">

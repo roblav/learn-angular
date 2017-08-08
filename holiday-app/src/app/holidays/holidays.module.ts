@@ -17,7 +17,8 @@ import { HolidayBalanceComponent } from './holiday-balance/holiday-balance.compo
 import { HolidayComponent } from './holiday.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { HolidaysRouterModule } from './holidays-router.module'
+import { HolidaysRouterModule } from './holidays-router.module';
+import { HolidayBalanceDetailsComponent } from './holiday-balance-details/holiday-balance-details.component'
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { HolidaysRouterModule } from './holidays-router.module'
     HolidayFormComponent,
     HolidayBalanceComponent,
     HolidayComponent,
-    FooterComponent
+    FooterComponent,
+    HolidayBalanceDetailsComponent
   ],
   exports: [
     HolidayListComponent,

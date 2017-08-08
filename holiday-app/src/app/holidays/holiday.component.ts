@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Holiday } from './holiday.model'
 import { HolidayDataService } from './holiday-data.service'
 
+import { HolidayBalance } from './holiday-balance.model'
+
 @Component({
   selector: 'app-holiday',
   templateUrl: './holiday.component.html',
@@ -14,6 +16,9 @@ export class HolidayComponent implements OnInit {
   holidays: Holiday[] = [];
   holidaysPending: Holiday[] = [];
   holidaysTaken: Holiday[] = [];
+
+  dailyHours: number = 7.5;
+  holidayBalance: HolidayBalance = new HolidayBalance();
 
   updateHoliday: Holiday;
 

@@ -14,7 +14,6 @@ export class HolidayFormComponent implements OnInit {
   submitted: boolean = false;
   holiday: Holiday = new Holiday();
   editHoliday: boolean = false;
-  holidayBalance: HolidayBalance = new HolidayBalance();
 
   @Input() updateHoliday: Holiday;
   @Input() estimatedBalanceHoursEOY: number;
