@@ -5,6 +5,7 @@ export class HolidayBalance {
   dailyHours?:number
 
   constructor(values: Object = {}) {
+    this.estimatedBalanceEOY = 0
     this.dailyHours = 7.5
     Object.assign(this, values);
   }
