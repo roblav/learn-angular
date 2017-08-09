@@ -13,6 +13,9 @@ export class Holiday {
         if(values['days']){
             values['days'] = parseInt(values['days'])
         }
+        if(values['hours']){
+            values['hours'] = parseInt(values['hours'])
+        }
         Object.assign(this, values);
     }
 }

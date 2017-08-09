@@ -9,13 +9,13 @@
   ],
   "holidays": [
     {
-      "id": 0,
-      "description": "Centre Parcs",
-      "startDay": "2017-08-01T23:00:00.000Z",
-      "endDay": "2017-08-07T23:00:00.000Z",
+      "taken": false,
       "days": 6,
       "hours": 45,
-      "taken": false
+      "id": 0,
+      "description": "Centre Parcs",
+      "startDay": "2017-08-13T23:00:00.000Z",
+      "endDay": "2017-08-20T23:00:00.000Z"
     },
     {
       "taken": true,
@@ -24,16 +24,16 @@
       "id": 1,
       "description": "Day to sort house",
       "startDay": "2017-06-27T23:00:00.000Z",
-      "endDay": null
+      "endDay": "2017-06-27T23:00:00.000Z"
     },
     {
-      "id": 2,
-      "description": "Childcare: School closed",
-      "startDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
-      "endDay": "Sat Jul 29 2017 22:31:15 GMT+0100 (BST)",
+      "taken": false,
       "days": 0,
       "hours": 3,
-      "taken": false
+      "id": 2,
+      "description": "Childcare: School closed",
+      "startDay": "2017-07-16T23:00:00.000Z",
+      "endDay": "2017-07-16T23:00:00.000Z"
     },
     {
       "taken": false,
@@ -45,9 +45,9 @@
       "endDay": "2017-07-06T23:00:00.000Z"
     },
     {
-      "taken": false,
-      "days": 1,
-      "hours": 7.5,
+      "taken": true,
+      "days": 2,
+      "hours": 15,
       "id": 4,
       "description": "U2 Ireland",
       "startDay": "2017-07-19T23:00:00.000Z",
@@ -64,11 +64,11 @@
     },
     {
       "taken": false,
-      "days": "1",
-      "hours": 7.5,
-      "description": "Test",
-      "startDay": "2017-08-15T23:00:00.000Z",
-      "endDay": "2017-08-15T23:00:00.000Z",
+      "days": 0,
+      "hours": "3.75",
+      "description": "Pray over students",
+      "startDay": "2017-08-21T23:00:00.000Z",
+      "endDay": "2017-08-21T23:00:00.000Z",
       "id": 6
     }
   ]

@@ -35,6 +35,7 @@ export class HolidayComponent implements OnInit {
           console.dir(balance)
           this.holidayBalance = balance;
           this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
+          this.setHolidayTaken(balance.periodEndDate);
           this.updateHolidayArray()
         },
         (_) => {
@@ -90,13 +91,22 @@ export class HolidayComponent implements OnInit {
         (balance) => {
           this.holidayBalance = balance;
           this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
+          //I want to automatically set the taken value of a holiday based on periodDate
+          this.setHolidayTaken(balance.periodEndDate);
           this.updateHolidayArray();
         },
         (_) => {
           // do nothing
         } 
       )
-  
+  }
+
+  setHolidayTaken(periodEndDate) {
+    console.log(periodEndDate);
+    this.holidays.map((h) => {
+      periodEndDate > h.endDay ? h.taken = true : h.taken = false;
+      return h;
+    })
   }
 
   onAddHoliday(holiday: Holiday) {
