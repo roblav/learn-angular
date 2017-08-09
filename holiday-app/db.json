@@ -1,4 +1,12 @@
 {
+  "balance": [
+    {
+      "estimatedBalanceEOY": "59",
+      "dailyHours": 7.5,
+      "periodEndDate": "2017-07-29T23:00:00.000Z",
+      "id": 0
+    }
+  ],
   "holidays": [
     {
       "id": 0,

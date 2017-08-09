@@ -27,11 +27,20 @@ export class HolidayComponent implements OnInit {
   adjBalanceEOY = { days: 0, hours: 0 }
 
   onUpdateBalance(balance: HolidayBalance) {
-    console.log(balance);
-    //Now update the values
-    this.holidayBalance = balance;
-    this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
-    this.updateHolidayArray()
+
+    this.holidayDataService
+      .updateBalance(balance)
+      .subscribe(
+        (balance) => {
+          console.dir(balance)
+          this.holidayBalance = balance;
+          this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
+          this.updateHolidayArray()
+        },
+        (_) => {
+          // do nothing
+        } 
+      )
   }
 
   //Work out the total hours
@@ -73,6 +82,7 @@ export class HolidayComponent implements OnInit {
           this.updateHolidayArray()
         }
       )
+  
   }
 
   onAddHoliday(holiday: Holiday) {

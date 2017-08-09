@@ -21,7 +21,7 @@ export class HolidayBalanceDetailsComponent implements OnInit {
   @ViewChild('holidayBalanceDetailsForm') form;
 
   ngAfterViewInit() {
-    console.log(this.form)
+    //console.log(this.form)
     //this.form.control.valueChanges
     //  .subscribe(values => this.updateBalance(values));
   }

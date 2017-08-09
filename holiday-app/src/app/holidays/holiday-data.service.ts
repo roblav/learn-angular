@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Holiday } from './holiday.model';
-import { ApiService } from './api.service';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
+import { ApiService } from './api.service';
+import { Holiday } from './holiday.model';
+import { HolidayBalance } from './holiday-balance.model';
 
 
 @Injectable()
@@ -52,6 +53,10 @@ export class HolidayDataService {
 
   updateHoliday(holiday: Holiday): Observable<Holiday>  {
     return this.api.updateHoliday(holiday);
+  }
+
+  updateBalance(balance: HolidayBalance): Observable<HolidayBalance> {
+    return this.api.updateBalance(balance);
   }
 
   //Simulate PUT /holidays:id

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Http, Response } from '@angular/http';
 
-import { Holiday } from './holiday.model'
+import { Holiday } from './holiday.model';
+import { HolidayBalance } from './holiday-balance.model';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -49,6 +50,15 @@ export class ApiService {
       .put(API_URL + '/holidays/' + holiday.id, holiday)
       .map(response => {
         return new Holiday(response.json());
+      })
+      .catch(this.handleError);
+  }
+
+  public updateBalance(balance: HolidayBalance): Observable<HolidayBalance> {
+    return this.http
+      .put(API_URL + '/balance/' + 0, balance)
+      .map(response => {
+        return new HolidayBalance(response.json());
       })
       .catch(this.handleError);
   }

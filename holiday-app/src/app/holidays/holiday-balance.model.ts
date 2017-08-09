@@ -1,8 +1,9 @@
-export class HolidayBalance { 
+export class HolidayBalance {
+  id?: number 
   periodEndDate?: string
   endBalanceHours?: number
-  estimatedBalanceEOY?:number
-  dailyHours?:number
+  estimatedBalanceEOY?: number
+  dailyHours?: number
 
   constructor(values: Object = {}) {
     this.estimatedBalanceEOY = 0
