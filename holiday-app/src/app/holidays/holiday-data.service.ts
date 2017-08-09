@@ -22,6 +22,10 @@ export class HolidayDataService {
     return this.api.getAllHolidays();
   }
 
+  getHolidayBalance(): Observable<HolidayBalance> {
+    return this.api.getHolidayBalance();
+  }
+
   //Simulate GET /holidays/:id
   getHolidayById(id): Holiday {
     return this.holidays

@@ -27,6 +27,15 @@ export class ApiService {
       .catch(this.handleError);
   }
 
+  public getHolidayBalance(): Observable<HolidayBalance> {
+    return this.http
+      .get(API_URL + '/balance/0')
+      .map(response => {
+        const balance = response.json();
+        return balance;
+      })
+  }
+
   public createHoliday(holiday: Holiday): Observable<Holiday[]> {
     
     //console.log("Holiday: "+holiday)

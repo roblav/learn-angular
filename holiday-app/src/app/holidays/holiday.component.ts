@@ -82,6 +82,20 @@ export class HolidayComponent implements OnInit {
           this.updateHolidayArray()
         }
       )
+
+    //Get holidayBalance
+    this.holidayDataService
+      .getHolidayBalance()
+      .subscribe(
+        (balance) => {
+          this.holidayBalance = balance;
+          this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
+          this.updateHolidayArray();
+        },
+        (_) => {
+          // do nothing
+        } 
+      )
   
   }
 
