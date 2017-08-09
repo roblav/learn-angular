@@ -16,7 +16,6 @@ export class HolidayFormComponent implements OnInit {
   editHoliday: boolean = false;
 
   @Input() updateHoliday: Holiday;
-  @Input() estimatedBalanceHoursEOY: number;
 
   @Output() add: EventEmitter<Holiday> = new EventEmitter();
   @Output() update: EventEmitter<Holiday> = new EventEmitter();

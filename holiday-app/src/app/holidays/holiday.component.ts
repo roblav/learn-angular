@@ -12,36 +12,23 @@ import { HolidayBalance } from './holiday-balance.model'
   providers: [ HolidayDataService ]
 })
 export class HolidayComponent implements OnInit {
+
   title = 'Holiday Balance App';
   holidays: Holiday[] = [];
   holidaysPending: Holiday[] = [];
   holidaysTaken: Holiday[] = [];
 
-  dailyHours: number = 7.5;
   holidayBalance: HolidayBalance = new HolidayBalance();
 
   updateHoliday: Holiday;
 
-  adjBalanceEOY = {
-    days: 0,
-    hours: 0
-  }
-
-  holidaysPendingTotals = {
-    days: 0,
-    hours: 0
-  }
-
-  estBalanceEOY = {
-    days: 0,
-    hours: 101.082
-  }
-
-  estimatedBalanceHoursEOY: number = this.estBalanceEOY.hours;
+  holidaysPendingTotals = { days: 0, hours: 0 }
+  adjBalanceEOY = { days: 0, hours: 0 }
+  estBalanceEOY = { days: 0, hours: 101.082 }
 
   //Work out the total hours
 
-
+  //Date sort function to date order holidays
   date_sort_desc(date1: Holiday, date2: Holiday) {
     let a = new Date(date2.startDay);
     let b = new Date(date1.startDay);
@@ -60,9 +47,9 @@ export class HolidayComponent implements OnInit {
     //Update adjusted balance
     this.adjBalanceEOY = Object.assign({}, this.estBalanceEOY);
     this.adjBalanceEOY.hours = this.adjBalanceEOY.hours - totalHours.hours
-    this.adjBalanceEOY.days = this.adjBalanceEOY.hours / 7.5
+    this.adjBalanceEOY.days = this.adjBalanceEOY.hours / this.holidayBalance.dailyHours
 
-    this.estBalanceEOY.days = this.estBalanceEOY.hours / 7.5
+    this.estBalanceEOY.days = this.estBalanceEOY.hours / this.holidayBalance.dailyHours
   }
 
   constructor(private holidayDataService: HolidayDataService) { }

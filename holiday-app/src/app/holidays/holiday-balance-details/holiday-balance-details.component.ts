@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'holiday-balance-details',
@@ -17,7 +17,7 @@ export class HolidayBalanceDetailsComponent implements OnInit {
   @ViewChild('holidayBalanceDetailsForm') form;
 
   ngAfterViewInit() {
-    console.log(this.form)
+    //console.log(this.form)
     this.form.control.valueChanges
       .subscribe(values => this.doSomething(values));
   }
