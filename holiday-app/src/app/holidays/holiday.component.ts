@@ -23,8 +23,16 @@ export class HolidayComponent implements OnInit {
   updateHoliday: Holiday;
 
   holidaysPendingTotals = { days: 0, hours: 0 }
-  adjBalanceEOY = { days: 0, hours: 0 }
   estBalanceEOY = { days: 0, hours: 101.082 }
+  adjBalanceEOY = { days: 0, hours: 0 }
+
+  onUpdateBalance(balance: HolidayBalance) {
+    console.log(balance);
+    //Now update the values
+    this.holidayBalance = balance;
+    this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
+    this.updateHolidayArray()
+  }
 
   //Work out the total hours
 

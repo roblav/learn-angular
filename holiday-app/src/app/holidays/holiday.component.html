@@ -28,7 +28,8 @@
 
     <h2 class="h4">Holidays Balance Details</h2>
     <holiday-balance-details
-      [holidayBalance]="holidayBalance">
+      [holidayBalance]="holidayBalance"
+      (update)="onUpdateBalance($event)">
     </holiday-balance-details>
 
     <holiday-form 

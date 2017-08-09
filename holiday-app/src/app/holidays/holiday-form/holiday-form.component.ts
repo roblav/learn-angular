@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges, Input, Output, EventEmitter } from '@angular/core';
 
 import { Holiday } from '../holiday.model'
-import { HolidayBalance } from '../holiday-balance.model'
 
 @Component({
   selector: 'holiday-form',
