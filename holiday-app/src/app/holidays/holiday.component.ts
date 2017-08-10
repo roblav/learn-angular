@@ -26,6 +26,19 @@ export class HolidayComponent implements OnInit {
   estBalanceEOY = { days: 0, hours: 101.082 }
   adjBalanceEOY = { days: 0, hours: 0 }
 
+  //Calulate the estBalanceEOY.hours based on periods remaining
+  getEstimatedEOY() {
+    //Period end date
+    let periodEndDate = this.holidayBalance.periodEndDate
+    //EOY date - 31st Aug
+    let eoyDate = Date.parse('2017-08-30T23:00:00.000Z');
+    //How many weeks between these dates
+    let weeksRemaining = Math.round((eoyDate - Date.parse(periodEndDate)) / (7 * 24 * 60 * 60 * 1000));
+    //How many periods
+    //Holiday hours per period 7.81
+    return Math.floor(weeksRemaining / 2.166) * 7.81 + parseFloat(this.holidayBalance.endBalanceHours)
+  }
+
   onUpdateBalance(balance: HolidayBalance) {
 
     this.holidayDataService
@@ -37,6 +50,7 @@ export class HolidayComponent implements OnInit {
           this.estBalanceEOY.hours = balance.estimatedBalanceEOY;
           this.setHolidayTaken(balance.periodEndDate);
           this.updateHolidayArray()
+          console.log(this.getEstimatedEOY());
         },
         (_) => {
           // do nothing
@@ -102,7 +116,7 @@ export class HolidayComponent implements OnInit {
   }
 
   setHolidayTaken(periodEndDate) {
-    console.log(periodEndDate);
+    //console.log(periodEndDate);
     this.holidays.map((h) => {
       periodEndDate > h.endDay ? h.taken = true : h.taken = false;
       return h;

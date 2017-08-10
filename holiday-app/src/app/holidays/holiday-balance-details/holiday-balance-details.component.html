@@ -8,6 +8,10 @@
   <md-datepicker #periodEndDate startView="year" [startAt]="startDate"></md-datepicker>
 
   <md-input-container>
+    <input mdInput placeholder="FYTD Balance" name="endBalanceHours" [(ngModel)]="holidayBalance.endBalanceHours">
+  </md-input-container>
+
+  <md-input-container>
     <input mdInput placeholder="Estimated End Of Year" name="estimatedBalanceEOY" [(ngModel)]="holidayBalance.estimatedBalanceEOY">
   </md-input-container>
 

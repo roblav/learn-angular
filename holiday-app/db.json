@@ -1,9 +1,10 @@
 {
   "balance": [
     {
-      "estimatedBalanceEOY": "59",
+      "endBalanceHours": "70.01",
+      "estimatedBalanceEOY": "101.094",
       "dailyHours": 7.5,
-      "periodEndDate": "2017-07-29T23:00:00.000Z",
+      "periodEndDate": "2016-01-09T00:00:00.000Z",
       "id": 0
     }
   ],
@@ -65,11 +66,29 @@
     {
       "taken": false,
       "days": 0,
-      "hours": "3.75",
+      "hours": "3",
       "description": "Pray over students",
       "startDay": "2017-08-21T23:00:00.000Z",
       "endDay": "2017-08-21T23:00:00.000Z",
       "id": 6
+    },
+    {
+      "taken": false,
+      "days": "1",
+      "hours": 7.5,
+      "description": "Family day",
+      "startDay": "2017-08-28T23:00:00.000Z",
+      "endDay": "2017-08-28T23:00:00.000Z",
+      "id": 7
+    },
+    {
+      "taken": false,
+      "days": "2",
+      "hours": 15,
+      "description": "CARRY OVER",
+      "startDay": "2017-07-30T23:00:00.000Z",
+      "endDay": "2017-07-30T23:00:00.000Z",
+      "id": 8
     }
   ]
 }
