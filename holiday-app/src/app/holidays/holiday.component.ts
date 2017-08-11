@@ -28,22 +28,14 @@ export class HolidayComponent implements OnInit {
 
   //Calulate the estBalanceEOY.hours based on periods remaining
   getEstimatedEOY() {
-    //Period end date
     let periodEndDate = new Date(this.holidayBalance.periodEndDate)
-    //EOY date - 31st Aug
-    //let eoyDate = new Date('2017-08-30T23:00:00.000Z').getMonth();
-    //calcPeriodsRemaing Aug (12) Apr (8)
     let monthsLeftArray = [7,6,5,4,3,2,1,12,11,10,9,8]
-    //Depending if the day is on or after 15th
     let monthsLeft = monthsLeftArray.indexOf(periodEndDate.getMonth())
-    let periodsLeft = monthsLeft * 2
-    if(periodEndDate.getDate() < 15) {
-      periodsLeft += 2
-    } else {
-      periodsLeft++
-    }
-
-    console.log(periodEndDate.getDate(),periodEndDate.getMonth(), monthsLeft, periodsLeft)
+    let periodsLeft = (monthsLeft * 2) + 1
+    if(periodEndDate.getDate() < 15) periodsLeft++
+    //console.log(this.holidayBalance.periodEndDate, periodEndDate,periodEndDate.getDate(),periodEndDate.getMonth(), monthsLeft, periodsLeft)
+    //Calculate the Estimated EOY Balance
+    this.holidayBalance.estimatedBalanceEOY = (periodsLeft * 7.81) + parseFloat(this.holidayBalance.endBalanceHours)
   }
 
 
