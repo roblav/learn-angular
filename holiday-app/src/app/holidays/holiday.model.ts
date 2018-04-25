@@ -1,21 +1,13 @@
 export class Holiday {
-    id?: number
-    description?: string
-    startDay?: string
-    endDay?: string
-    days?: number
-    hours?: number
-    taken?: boolean = false
+  id?: number
+  description?: string
+  holidayStart?: string
+  holidayEnd?: string
+  hoursTaken?: number
+  taken?: boolean = false
 
-    constructor(values: Object = {}) {
-        this.days = 0
-        this.hours = 0
-        if(values['days']){
-            values['days'] = parseInt(values['days'])
-        }
-        if(values['hours']){
-            values['hours'] = parseInt(values['hours'])
-        }
-        Object.assign(this, values);
-    }
+  constructor(values: Object = {}) {
+    this.hoursTaken = 0
+    Object.assign(this, values);
+  }
 }

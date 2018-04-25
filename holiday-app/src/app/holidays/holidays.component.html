@@ -1,0 +1,32 @@
+<!-- Add Holidays Form-->
+<div class="container">
+    <!-- Content here -->
+  <form (ngSubmit)="onSubmit()" #holidayForm="ngForm">
+    <h1 class="h4">Enter holiday details</h1>
+    <mat-form-field>
+      <input matInput [matDatepicker]="holidayStart" placeholder="Choose a start date" [(ngModel)]="holiday.holidayStart" name="holidayStart">
+      <mat-datepicker-toggle matSuffix [for]="holidayStart"></mat-datepicker-toggle>
+      <mat-datepicker #holidayStart></mat-datepicker>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput [matDatepicker]="holidayEnd" placeholder="Choose an end date" [(ngModel)]="holiday.holidayEnd" name="holidayEnd">
+      <mat-datepicker-toggle matSuffix [for]="holidayEnd"></mat-datepicker-toggle>
+      <mat-datepicker #holidayEnd></mat-datepicker>
+    </mat-form-field>
+  
+    <div class="form-group">
+      <label for="hoursTaken">Time taken</label>
+      <input type="number" class="form-control" id="hoursTaken" placeholder="Enter hours" [(ngModel)]="holiday.hoursTaken" name="hoursTaken">
+      <small class="form-text text-muted">Enter amount of hours taken</small>
+    </div>
+  
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="taken" [(ngModel)]="holiday.taken" name="taken">
+      <label class="form-check-label" for="taken">Holiday taken</label>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Add Holiday</button>
+  </form>
+  {{diagnostic}}
+  </div>

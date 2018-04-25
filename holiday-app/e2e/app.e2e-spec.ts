@@ -1,10 +1,10 @@
-import { HolidayAppPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('holiday-app App', () => {
-  let page: HolidayAppPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new HolidayAppPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
